@@ -37,15 +37,21 @@
     <div class="page-content">
       <h1>My Profile</h1>
 
+
+      <div id='userProfile'>
       <div class="profile">
         <figure class="float-left">
-          <a target="_blank" href="img/profile-pic.jpg"><img class="img-thumbnail" src="img/profile-pic.jpg" alt="Profile" width="200"></a>
-          <figcaption><cite>Federico Rizzarelli, Unsplash.com</cite></figcaption>
+          <!-- <a target="_blank" href="img/profile-pic.jpg"><img class="img-thumbnail" src="img/profile-pic.jpg" alt="Profile" width="200"></a> -->
+          <!-- <figcaption><cite>Federico Rizzarelli, Unsplash.com</cite></figcaption> -->
+          <a v-bind:href="userImgLarge">
+            <img class="img-thumbnail" alt ="Profile" width="200" v-bind:src="userImgThumb">
+          </a>
+
         </figure>
       </div>
 
         <div class="info-card float-right">
-          <h2>Bernice Lee</h2>
+          <h2>{{userName}}</h2>
           <p>Australia</p>
           <p>Born 08/02/1994</p>
           <p>26 years old</p>
@@ -53,11 +59,16 @@
         </div>
 
 
+        </div>
+
 
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/profile-app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
