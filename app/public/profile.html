@@ -53,7 +53,7 @@
         <div class="info-card float-right">
           <h2>{{userName}}</h2>
           <p>{{userCountry}}</p>
-          <p>{{userDob}}</p>
+          <p>Born {{formatDate(userDob)}}</p>
           <p>{{userAge}} years old</p>
           <a v-bind:href = "'mailto:' + userEmail">{{userEmail}}</a>
         </div>
@@ -67,6 +67,10 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- development version, includes helpful console warnings -->
+
+    <!-- Date formatting moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+    <!-- Vue JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/profile-app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

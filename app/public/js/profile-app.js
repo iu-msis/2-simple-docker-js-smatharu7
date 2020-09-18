@@ -33,6 +33,12 @@ var myApp = new Vue({
         this.userCountry = userData.location.country;
 
       });
+    },
+
+    formatDate(d){
+      //pass a date to the function
+      return moment(d).format("MMMM Do YYYY");
+
     }
   }
 })
