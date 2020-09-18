@@ -43,8 +43,8 @@
         <figure class="float-left">
           <!-- <a target="_blank" href="img/profile-pic.jpg"><img class="img-thumbnail" src="img/profile-pic.jpg" alt="Profile" width="200"></a> -->
           <!-- <figcaption><cite>Federico Rizzarelli, Unsplash.com</cite></figcaption> -->
-          <a v-bind:href="userImgLarge">
-            <img class="img-thumbnail" alt ="Profile" width="200" v-bind:src="userImgThumb">
+          <a target="_blank" v-bind:href="userImgLarge">
+            <img class="img-thumbnail" alt ="Profile" width="150" v-bind:src="userImgThumb">
           </a>
 
         </figure>
@@ -52,10 +52,10 @@
 
         <div class="info-card float-right">
           <h2>{{userName}}</h2>
-          <p>Australia</p>
-          <p>Born 08/02/1994</p>
-          <p>26 years old</p>
-          <a href = "mailto: bernlee@gmail.com">bernlee@gmail.com</a>
+          <p>{{userCountry}}</p>
+          <p>{{userDob}}</p>
+          <p>{{userAge}} years old</p>
+          <a v-bind:href = "'mailto:' + userEmail">{{userEmail}}</a>
         </div>
 
 

@@ -4,8 +4,12 @@ var myApp = new Vue({
   //include all characteristics you want to see on the page under data and initialize elements here
   data: {
     userName:'',
+    userCountry:'',
     userImgLarge:'',
     userImgThumb:'',
+    userDob:'',
+    userEmail:'',
+    userAge:'',
 
   },
   //created is the first thing browser recognizes when you launch application
@@ -24,6 +28,9 @@ var myApp = new Vue({
         this.userEmail = userData.email;
         this.userImgLarge = userData.picture.large;
         this.userImgThumb = userData.picture.thumbnail;
+        this.userDob = userData.dob.date;
+        this.userAge = userData.dob.age;
+        this.userCountry = userData.location.country;
 
       });
     }
