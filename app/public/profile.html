@@ -57,6 +57,11 @@
           <p>{{userAge}} years old</p>
           <a v-bind:href = "'mailto:' + userEmail">{{userEmail}}</a>
         </div>
+
+        <!-- Button to reload data and get new user -->
+        <form v-on:submit.prevent="fetchUser">
+          <button type="submit" class="btn btn-primary" value="submit">Get New Profile</button>
+        </form>
         </div>
     </div>
 
